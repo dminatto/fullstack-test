@@ -5,7 +5,6 @@ export default {
     state: {
         entries: [],
         name: '',
-        weather: [],
         temp: null,
     },
     mutations: {
@@ -20,13 +19,16 @@ export default {
         },
         getName(state){
             return state.name;
-        }
+        },
+        setTemp(state, payload){
+            state.temp = payload;
+        },
     },
     actions: {
         c({ commit, state }) {
             const token = "";
             const city = state.name;
-            const url = `api.openweathermap.org/data/2.5/weather?q=${city},uk&appid=${token}`
+            const url = `api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${token}`
 
             return fetch(url)
                 .then(r => r.json())

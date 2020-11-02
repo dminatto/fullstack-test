@@ -61,7 +61,7 @@ export default {
               ? entry.name.slice(0, 60) + "..."
               : entry.name;
 
-          return Description + " - " + entry.name;
+          return Description + " - " + entry.main.temp;
         }),
     }),
   },

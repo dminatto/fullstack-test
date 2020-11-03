@@ -12,7 +12,8 @@ class SpotifyService
     public function __construct()
     {
         $this->client = new Client([
-            'base_uri' => getenv('SPOTIFY_API')
+            'base_uri' => getenv('SPOTIFY_API'),
+            '' => getenv('')
         ]);
     }
 

@@ -6,27 +6,27 @@ use Exception;
 
 class ExceptionFactory
 {
-    public static function sucesso($mensagem)
+    public static function sucess($mensagem)
     {
         return new Exception($mensagem, 200);
     }
 
-    public static function requisicaoInvalida($mensagem)
+    public static function invalidRequest($mensagem)
     {
-        return new Exception($mensagem, 400);
+        return new Exception($mensagem, 406);
     }
 
-    public static function naoAutorizado($mensagem)
+    public static function notAuthorized($mensagem)
     {
         return new Exception($mensagem, 401);
     }
 
-    public static function naoEncontrado($mensagem)
+    public static function notFound($mensagem)
     {
         return new Exception($mensagem, 404);
     }
 
-    public static function erroInterno($mensagem)
+    public static function internalError($mensagem)
     {
         return new Exception($mensagem, 500);
     }

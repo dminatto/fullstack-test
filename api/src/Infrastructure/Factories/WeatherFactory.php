@@ -8,7 +8,6 @@ class WeatherFactory
 {
     public static function create($entries)
     {
-
         $list = [];
 
         foreach ($entries as $entry) {
@@ -19,11 +18,9 @@ class WeatherFactory
             $city->setDescription($entry->weather->description);
             $city->setTemperature($entry->main->temp);
 
-
             $list[] = $city;
         }
 
         return $list;
-
     }
 }

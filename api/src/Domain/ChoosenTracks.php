@@ -6,10 +6,10 @@ use Weather\Api\Infrastructure\Http\SpotifyService;
 
 class ChoosenTracks
 {
-    const PARTY_MUSIC = "party";
-    const POP_MUSIC = "pop";
-    const ROCK_MUSIC = "rock";
-    const CLASSIC_MUSIC = "classical";
+    const PARTY_MUSIC = "37i9dQZF1DX9oegrjMzKDW";
+    const POP_MUSIC = "37i9dQZF1DX1ngEVM0lKrb";
+    const ROCK_MUSIC = "37i9dQZF1DX4o1oenSJRJd";
+    const CLASSIC_MUSIC = "37i9dQZF1DWWEJlAGA9gs0";
 
     private $temperature;
 

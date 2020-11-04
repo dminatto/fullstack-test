@@ -1,0 +1,30 @@
+{
+  "name": "weather/api",
+  "authors": [
+    {
+      "name": "Daniele Minatto",
+      "email": "daniele.minatto@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "7.*",
+    "slim/slim": "^3.12",
+    "illuminate/database": "^5.4",
+    "vlucas/phpdotenv": "^3.5",
+    "guzzlehttp/guzzle": "^6.3",
+    "ext-json": "*",
+    "phpmailer/phpmailer": "^6.0",
+    "firebase/php-jwt": "^5.0",
+    "jwilsson/spotify-web-api-php": "^3.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Weather\\Api\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Weather\\Api\\": "tests/"
+    }
+  }
+}

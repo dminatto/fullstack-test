@@ -16,7 +16,7 @@ class Bootstrap
     public static function loadEnv()
     {
 
-        $dotenv = Dotenv::create(__DIR__ . '/.env');
+        $dotenv = Dotenv::create(__DIR__ . '/../../../');
         $dotenv->load();
     }
 

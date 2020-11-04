@@ -24,6 +24,17 @@ class Playlist
     {
         $this->musics[] = $music;
     }
+
+    public function toArray()
+    {
+        return array_map(function ($music){
+            return [
+              'artist' => $music->getArtist(),
+              'name' => $music->getName(),
+              'link' => $music->getLink()
+            ];
+        }, $this->musics);
+    }
 }
 
 

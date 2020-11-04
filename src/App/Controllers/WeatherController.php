@@ -15,8 +15,8 @@ class WeatherController
 
         $query = $request['nameCity'];
 
-        $options = (new OpenWeatherService())->findWeather($query);
-        return json_encode($options);
+        $city = (new OpenWeatherService())->findWeather($query);
+        return $city->toArray();
     }
 }
 

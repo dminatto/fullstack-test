@@ -22,13 +22,11 @@ class OpenWeatherService
     public function findWeather($query)
     {
         try{
-
-            $res = $this->client->request('GET', "?q={$query}&appid=".getenv('OPENWEATHER_KEY'));
+            $res = $this->client->request('GET', "?q={$query}&units=metric&appid=".getenv('OPENWEATHER_KEY'));
             $body = $res->getBody();
         }catch (\Exception $e){
             var_dump($e);exit;
         }
-
-        return WeatherFactory::create(json_decode($body));
+        return WeatherFactory::create(json_decode($body->getContents()));
     }
 }

@@ -55,4 +55,13 @@ class City
     {
         $this->description = $description;
     }
+
+    public function toArray()
+    {
+        return [
+            'name' => $this->getName(),
+            'description' => $this->getDescription(),
+            'temperature' => $this->getTemperature()
+        ];
+    }
 }

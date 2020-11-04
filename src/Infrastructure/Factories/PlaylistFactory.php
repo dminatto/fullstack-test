@@ -13,12 +13,13 @@ class PlaylistFactory
 
         foreach ($entries as $entry) {
 
-            $city = new Music();
+            $track = new Music();
 
-            $city->setName($entry->name);
+            $track->setName($entry->name);
+            $track->setArtist($entry->name);
+            $track->setLink($entry->name);
 
-
-            $list[] = $city;
+            $list[] = $track;
         }
 
         return $list;

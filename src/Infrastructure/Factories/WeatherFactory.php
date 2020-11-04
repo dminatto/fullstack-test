@@ -6,21 +6,14 @@ use Weather\Api\Domain\City;
 
 class WeatherFactory
 {
-    public static function create($entries)
+    public static function create($entry)
     {
-        $list = [];
-
-        foreach ($entries as $entry) {
-
             $city = new City();
 
             $city->setName($entry->name);
-            $city->setDescription($entry->weather->description);
+            $city->setDescription($entry->weather[0]->description);
             $city->setTemperature($entry->main->temp);
 
-            $list[] = $city;
-        }
-
-        return $list;
+        return $city;
     }
 }
